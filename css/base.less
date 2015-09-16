@@ -1,0 +1,186 @@
+@import "bootstrap";
+
+@font-color-light:#fff;
+
+body{
+  margin-top:@navbar-height;
+}
+li{
+  list-style: none;
+}
+
+//导航栏
+#logo{
+  display:inline-block;
+  width: 65px;
+  height:50px;
+  background:url("../img/hdr-spr.png") 0 -511px;
+  margin-top:-11px;
+}
+#menu_first{
+   padding-right:30px;
+   &:hover{
+     box-shadow:0 10px 0 @blue-lighter;
+  }
+}
+
+#dl_down{
+  width:400px;
+  padding:25px;
+  heigth:275px;
+  background:#fff;
+  border-radius: 5px;
+}
+
+//主体部分
+
+.main{
+  //background-color:#0062A9; //主题颜色
+  background-color:@blue-dark;
+  color:@font-color-light;
+  a {
+    color:@font-color-light;
+    &:hover{
+      color:@gray-light;
+    }
+  }
+  > .container{
+    > .row{
+      padding:10px 0;
+    }
+  }
+}
+.image_content{
+  position:relative;
+  //color:@font-color-light;
+  > div{
+    position:absolute;
+    bottom:0;
+    left:0;
+    padding:30px;
+    > img{
+      .shadow_all;
+    }
+  }
+}
+
+@media (max-width:@screen-xs) {
+   .image_content{
+     > div{
+       position:static;
+       padding:30px 10px;
+       margin-bottom:20px;
+       background-color:@blue;
+       .shadow_all;
+     }
+   }
+}
+
+.mask_content{
+  > div{
+     position:relative;
+    > div{
+       width:100%;
+       position:absolute;
+       bottom:0.01px;
+       padding:13px 15px 8px;
+       background:rgba(0,0,0,.7);
+    }
+  }
+}
+@media (max-width: @screen-md) {
+   .mask_content{
+     >div{
+       margin-top:9%;
+     }
+   }
+}
+.shadow_all{
+  display: block;
+  box-shadow: 7px 7px 0 @blue-darker;
+}
+#sm_div1{
+  padding:5% 0 5% 5%;
+  margin:8% 0 2%;
+  font-size:1em;
+  line-height: 1.8em;
+  background-color:@blue;
+  font-family:'Microsoft Yahei';
+  .shadow_all;
+  > .div1_image{
+      padding:20px 10px 18px 0;
+      border-right:1px solid @blue-lighter;
+  }
+  > .div1_body{
+    margin:20px;
+    a{
+      display:block;
+    }
+  }
+}
+#sm_div2{
+  margin-bottom:32px;
+  padding:30px;
+  line-height: 1.8em;
+  //border:1px solid #fff;
+  font-family:'Microsoft Yahei';
+  background-color:@blue;
+  .shadow_all;
+  > a{
+    display:block;
+  }
+}
+@media (max-width: @screen-md) {
+  #sm_div2{
+      margin-top:10%;
+  }
+}
+#sm_div3{
+  margin-top:30px;
+  margin-bottom:50px;
+  padding:20px 20px 40px 20px;
+  line-height: 1.8em;
+  //border:1px solid #fff;
+  font-family:'Microsoft Yahei';
+  background-color:@blue;
+  .shadow_all;
+  > a{
+    display:block;
+  }
+}
+#icon_gl{
+  display:inline-block;
+  width:14px;
+  height:15px;
+  background:url("../img/hdr-spr.png") 0 -178px;
+}
+.background_style{
+  display:inline-block;
+  width:13px;
+  height:10px;
+  //background:url("../img/hdr-spr.png") 0 @positionY+"px";
+}
+.sl_icon_down{
+  .background_style();
+  background:url("../img/hdr-spr.png") 0 -120px;
+}
+.sl_icon_up{
+  .background_style();
+  background:url("../img/sprite-carets.png") 0 -401px;
+  float:right;
+}
+.sl_icon_right{
+  .background_style();
+  background:url("../img/sprite-carets.png") 0 -377px;
+}
+
+//底部
+footer{
+  > .container{
+    padding:30px;
+  }
+}
+footer li>a{
+  display:inline-block;
+  line-height: 35px;
+}
